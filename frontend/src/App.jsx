@@ -7,7 +7,7 @@ import Insights from "./components/Insights";
 import CampaignTable from "./components/CampaignTable";
 import { downloadPDF } from "./components/pdfExport";
 
-const API = "http://localhost:5000/api";
+const API = import.meta.env.VITE_API_URL || "https://ads-performance-analyzer.onrender.com/api";
 
 export default function App() {
   const [data, setData] = useState(null);
